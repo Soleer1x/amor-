@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eu te amo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Cormorant:wght@600&display=swap');
+
+  :root{
+    --wine-deep: #170509;
+    --wine: #2c0b16;
+    --gold: #d4af6a;
+    --gold-soft: rgba(212,175,106,0.4);
+    --cream: #f6ecdf;
+    --cream-dim: rgba(246,236,223,0.82);
+  }
+
+  *{ box-sizing: border-box; }
+
+  body{
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--cream);
+    background:
+      radial-gradient(ellipse 70% 45% at 50% 0%, rgba(212,175,106,0.12), transparent 60%),
+      linear-gradient(180deg, var(--wine-deep) 0%, var(--wine) 45%, var(--wine-deep) 100%);
+  }
+
+  .wrap{
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 8vh 7vw 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ---------- hero ---------- */
+
+  .hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: center;
+  }
+
+  .frame{
+    width: min(52vw, 220px);
+    aspect-ratio: 4 / 5;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow:
+      0 0 0 1px var(--gold-soft),
+      0 0 0 8px var(--wine-deep),
+      0 0 0 9px var(--gold-soft),
+      0 24px 50px -18px rgba(0,0,0,0.75);
+    opacity: 0;
+    transform: scale(1.04);
+    animation: reveal 1.4s cubic-bezier(.22,.8,.32,1) 0.1s forwards;
+  }
+
+  @keyframes reveal{
+    to{ opacity: 1; transform: scale(1); }
+  }
+
+  .frame img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 28%;
+    filter: saturate(0.92) contrast(1.04);
+  }
+
+  .ornament{
+    width: 46px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  /* ---------- divider ---------- */
+
+  .divider{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    margin: 4.5rem 0 3.5rem;
+    color: var(--gold);
+  }
+
+  .divider::before, .divider::after{
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: linear-gradient(90deg, transparent, var(--gold-soft));
+  }
+  .divider::after{ background: linear-gradient(90deg, var(--gold-soft), transparent); }
+
+  .divider span{ font-size: 1.1rem; }
+
+  /* ---------- coleção de "eu te amo" ---------- */
+
+  .loves{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.15rem;
+    width: 100%;
+  }
+
+  .loves p{
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--cream-dim);
+  }
+
+  /* variação de tamanhos pra criar ritmo, sem virar bagunça */
+  .loves p.s1{ font-size: clamp(1.15rem, 3.4vw, 1.5rem); }
+  .loves p.s2{ font-size: clamp(1.4rem, 4.4vw, 1.9rem); color: var(--cream); }
+  .loves p.s3{
+    font-size: clamp(1.9rem, 6.2vw, 2.7rem);
+    font-family: 'Cormorant', serif;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--gold);
+    margin: 0.4rem 0;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .frame{ animation: none; opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="wrap">
+
+    <section class="hero">
+      <div class="frame">
+        <img src="casal.jpg" alt="Nós dois">
+      </div>
+      <div class="ornament"></div>
+    </section>
+
+    <div class="divider"><span>✦</span></div>
+
+    <section class="loves">
+      <p class="s3">Eu te amo</p>
+      <p class="s2">Eu te amo, amor</p>
+      <p class="s2">Eu te amo, princesa</p>
+      <p class="s3">Eu te amo, minha rainha</p>
+      <p class="s1">Eu te amo, minha vida</p>
+      <p class="s1">Eu te amo, bebê</p>
+      <p class="s2">Eu te amo, meu bem</p>
+      <p class="s1">Eu te amo, docinho</p>
+      <p class="s2">Eu te amo, minha linda</p>
+      <p class="s3">Eu te amo demais</p>
+      <p class="s1">Eu te amo, anjo</p>
+      <p class="s2">Eu te amo, meu amor</p>
+      <p class="s1">Eu te amo, florzinha</p>
+      <p class="s2">Eu te amo, minha paixão</p>
+      <p class="s1">Eu te amo, gatinha</p>
+      <p class="s3">Eu te amo com todo o meu coração</p>
+      <p class="s1">Eu te amo, meu tesouro</p>
+      <p class="s2">Eu te amo, minha felicidade</p>
+      <p class="s1">Eu te amo, minha metade</p>
+      <p class="s3">Eu te amo pra sempre</p>
+    </section>
+
+  </div>
+
+</body>
+</html>
