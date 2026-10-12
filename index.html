@@ -157,7 +157,7 @@ function tick(){var v=document.getElementById('date').value;if(!v)return;var s=n
 document.getElementById('count').innerHTML='<div><b>'+d+'</b>dias</div><div><b>'+Math.floor(d/30.44)+'</b>meses</div><div><b>'+Math.floor((n-s)/36e5)+'</b>horas</div>';}
 tick();setInterval(tick,60000);
 function chk(){var p=document.getElementById('pw').value.trim().toLowerCase().replace(/\s/g,'');
-if(p==='amordaminhavida'){document.getElementById('lock').style.display='none';document.getElementById('secret').style.display='block';for(var i=0;i<25;i++)setTimeout(hearts,i*80)}
+if(p==='diegotongo'){document.getElementById('lock').style.display='none';document.getElementById('secret').style.display='block';for(var i=0;i<25;i++)setTimeout(hearts,i*80)}
 else{var l=document.getElementById('lock');l.classList.remove('shake');void l.offsetWidth;l.classList.add('shake');document.getElementById('err').textContent='Senha incorreta. Tente de novo, meu amor 💕'}}
 document.getElementById('go').onclick=chk;document.getElementById('pw').onkeydown=function(e){if(e.key==='Enter')chk()};
 </script></body></html>
